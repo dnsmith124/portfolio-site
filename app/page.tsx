@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Page from '@/components/Page/Page';
 import CodeBlock from '@/components/CodeBlock/CodeBlock';
 import { timeout } from '@/utilities/utilities';
@@ -27,6 +27,7 @@ const Home = () => {
 
   useEffect(() => {
     checkLocalStorageForPageLoaded();
+  // eslint-disable-next-line
   },[]);
 
   useEffect(()=> {
@@ -34,6 +35,7 @@ const Home = () => {
       return;
 
     setShowContent(true);
+  // eslint-disable-next-line
   }, [animTrigger]);
 
   const handleResetAnims = async () => {
@@ -158,7 +160,7 @@ const Home = () => {
                 className={`text-codeBlue hover:text-codeBlueDark z-50 relative transition-colors duration-300 cursor-pointer mx-2 underline`} 
                 onClick={async ()=> handleResetAnims()}>here 
               </span> 
-              if you'd like to see it again.
+              if you&apos;d like to see it again.
             </p>
           </div>
         </section>
