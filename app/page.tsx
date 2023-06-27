@@ -13,33 +13,33 @@ const Home = () => {
   
   return (
     <Page title="Home" description="A NextJS portfolio site for David Smith.">
-      <p className={`${source_code_pro.className} text-codeBlue`}>Hi there, my name is</p>
-      <h2 className="text-8xl font-bold mb-10">David</h2>
+
       <section className='grid grid-cols-2'>
-        <div>
+        <div className='grid content-center'>
+          <p className={`${source_code_pro.className} text-codeBlue`}>Hi there, my name is</p>
+          <h2 className='text-8xl font-bold mb-3'>David</h2>
           <p className={`${source_code_pro.className} text-codeBlue mb-3`}>I'm a frontend developer.</p>
           <p className={`${source_code_pro.className} text-codeBlue mb-3`}>I love writing clean, functional, maintainable code.</p>
           <p className={`${source_code_pro.className} text-codeBlue mb-3`}>...but I love a lot of other things <span className='text-codeBlueDark cursor-pointer' onClick={()=>setCodeShown(prev=>!prev)}>too.</span><span className='font-thin text-lg animate-blinking-cursor'>|</span></p>
         </div>
         <div>
         <CodeBlock codeShown={codeShown}>
+{`const DavidsInterests = ({freeTime, energyLevel}) => {
+  if(!freeTime)
+    return;
 
-  {`const DavidsInterests = ({freeTime, energyLevel}) => {
-    if(!freeTime)
-      return;
+  let activity = '';
 
-    let activity = '';
+  switch (energyLevel) {
+    case (energyLevel >= 1): workOnNextNovel(); activity = 'writing'; break;
+    case (energyLevel > .5): hitTheClimbingGym(); activity = 'climbing'; break;
+    case (energyLevel >= .25): goPlayVideoGames(); activity = 'gaming'; break;
+    case (energyLevel > .1): goPlayVideoGames(); activity = 'gaming'; break;
 
-    switch (energyLevel) {
-      case (energyLevel >= 1): workOnNextNovel(); activity = 'writing'; break;
-      case (energyLevel > .5): hitTheClimbingGym(); activity = 'climbing'; break;
-      case (energyLevel >= .25): goPlayVideoGames(); activity = 'gaming'; break;
-      case (energyLevel > .1): goPlayVideoGames(); activity = 'gaming'; break;
-
-      default: activity = 'napping'; break;
-    }
-    return activity;
-  }`}
+    default: activity = 'napping'; break;
+  }
+  return activity;
+}`}
         </CodeBlock>
       </div>
       </section>
