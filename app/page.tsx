@@ -63,7 +63,7 @@ const Home = () => {
           />
           {/* <h2 className='text-8xl italic font-bold mb-6'>David</h2> */}
           <div className={`opacity-0 duration-500 transition-opacity  ${blurbVisible ? 'opacity-100 ' : ''}`}>
-            <p className={`${source_code_pro.className} text-codeBlue mb-3`}>I'm a frontend developer.</p>
+            <p className={`${source_code_pro.className} text-codeBlue mb-3`}>I&apos;m a frontend developer.</p>
             <p className={`${source_code_pro.className} text-codeBlue mb-3`}>I love writing clean, functional, maintainable code.</p>
             <p className={`${source_code_pro.className} text-codeBlue mb-3`}>...but I love a lot of other things <span className='text-codeBlueDark cursor-pointer' onClick={()=>setCodeShown(prev=>!prev)}>too</span><span className='font-thin text-lg animate-blinking-cursor'>|</span></p>
           </div>
