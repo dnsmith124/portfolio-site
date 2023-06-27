@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Portfolio site
 
-## Getting Started
+## Project Status
 
-First, run the development server:
+This project is currently in development. It is a portfolio site built with NextJS, Typescript, and Tailwind to display some of my work.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Feature Roadmap
+TBD
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NextJS, Typescript, Tailwind
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation and Setup Instructions
 
-## Learn More
+#### Node v19.7.0, Next v13.4.7, Typescript v5.1.3, React v18.2.0, Tailwind v3.3.2
 
-To learn more about Next.js, take a look at the following resources:
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Installation:
+- Run `npm install` inside the root directory of this repo. 
+- Then run `npm run dev` inside the root directory of this repo to start the site. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Project Screen Shot(s)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Incoming
