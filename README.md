@@ -1,4 +1,4 @@
-# My Portfolio site
+# My Portfolio Site
 
 ## Project Status
 
