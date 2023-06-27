@@ -5,6 +5,7 @@ import Page from '@/components/Page/Page';
 import CrtEffect from '@/components/CrtEffect/CrtEffect';
 import Link from 'next/link';
 import { source_code_pro } from './fonts';
+import CodeBlock from '@/components/CodeBlock/CodeBlock';
 
 const Home = () => {
 
@@ -21,27 +22,26 @@ const Home = () => {
           <p className={`${source_code_pro.className} text-codeBlue mb-3`}>...but I love a lot of other things <span className='text-codeBlueDark cursor-pointer' onClick={()=>setCodeShown(prev=>!prev)}>too.</span><span className='font-thin text-lg animate-blinking-cursor'>|</span></p>
         </div>
         <div>
-        <CrtEffect className={`bg-darkGray flex w-fit p-4 opacity-0 duration-500 transition-opacity ${codeShown ? 'opacity-100' : ''} `}>
-          <pre>
-            <code >
-{`const DavidsInterests = ({freeTime, energyLevel}) => {
-  if(!freeTime)
-    return;
+        <CrtEffect off className={`bg-darkGray flex w-fit p-4 opacity-0 duration-500 transition-opacity ${codeShown ? 'opacity-100' : ''} `}>
+        <CodeBlock>
 
-  let activity = '';
+  {`const DavidsInterests = ({freeTime, energyLevel}) => {
+    if(!freeTime)
+      return;
 
-  switch (energyLevel) {
-    case (energyLevel >= 1): workOnNextNovel(); activity = 'writing'; break;
-    case (energyLevel > .5): hitTheClimbingGym(); activity = 'climbing'; break;
-    case (energyLevel >= .25): goPlayVideoGames(); activity = 'gaming'; break;
-    case (energyLevel > .1): goPlayVideoGames(); activity = 'gaming'; break;
-  
-    default: activity = 'napping'; break;
-  }
-  return activity;
-}`}
-            </code>
-          </pre>
+    let activity = '';
+
+    switch (energyLevel) {
+      case (energyLevel >= 1): workOnNextNovel(); activity = 'writing'; break;
+      case (energyLevel > .5): hitTheClimbingGym(); activity = 'climbing'; break;
+      case (energyLevel >= .25): goPlayVideoGames(); activity = 'gaming'; break;
+      case (energyLevel > .1): goPlayVideoGames(); activity = 'gaming'; break;
+
+      default: activity = 'napping'; break;
+    }
+    return activity;
+  }`}
+        </CodeBlock>
         </CrtEffect>
       </div>
       </section>
