@@ -22,9 +22,6 @@ module.exports = {
       'mono': '"Source Code Pro", monospace;',
     },
     extend: {
-      width: {
-        'scanline': '141%',
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -34,7 +31,7 @@ module.exports = {
         'crtBgSize': '100% 2px, 3px 100%',
       },
       backgroundColor: {
-        'scanline': 'rgba(156, 220, 254, 0.2)',
+        'scanline': 'rgba(156, 220, 254, 0.1)',
       },
       boxShadow: {
         'inner': 'inset 1px 1px 5px 1px rgba(0,0,0,0.65)',
@@ -91,15 +88,15 @@ module.exports = {
           '100%': {'text-shadow': '2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px'},
         }, 
         'scanline': {
-          'from': {'transform': 'translateY(0) rotate(-45deg)'},
-          'to': {'transform': 'translateY(400vh) rotate(-45deg)'},
+          'from': {'top': '-10%'},
+          'to': {'top': '110%'},
         }
       },
       animation: {
         'blinking-cursor': '1s blink step-end infinite',
         'text-shadow': '1.6s textShadow infinite',
         'crt-flicker': 'flicker 0.15s infinite',
-        'scanline': 'scanline 4s linear infinite',
+        'scanline': 'scanline 3s linear infinite',
       }, 
     },
   },

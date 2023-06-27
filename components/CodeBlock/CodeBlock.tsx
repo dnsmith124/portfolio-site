@@ -1,24 +1,29 @@
 import { FC, ReactElement, useEffect } from 'react';
-// import "highlight.js/styles/github.css";
+import CrtEffect from '../CrtEffect/CrtEffect';
 import "highlight.js/styles/night-owl.css";
 import hljs from "highlight.js";
+import ScanLine from '../ScanLine/ScanLine';
 
 interface CodeBlockProps {
   children: string | ReactElement[] | ReactElement;
+  codeShown?: boolean;
 }
 
-const CodeBlock: FC<CodeBlockProps> = ({children}) => {
+const CodeBlock: FC<CodeBlockProps> = ({children, codeShown = false}) => {
 
   useEffect(() => {
     hljs.highlightAll();
   }, []);
 
   return(
-    <pre>
-      <code className="language-typescript bg-transparent	rounded-md shadow-inner">
-        {children}
-      </code>
-    </pre>
+    <CrtEffect off className={`bg-darkGray flex w-fit p-4 opacity-0 duration-500 transition-opacity ${codeShown ? 'opacity-100' : ''} `}>
+      <pre className='relative z-20 overflow-hidden'>
+        <ScanLine/>
+        <code className="language-typescript bg-transparent	rounded-md shadow-inner">
+          {children}
+        </code>
+      </pre>
+    </CrtEffect>
   )
 }
 

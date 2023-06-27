@@ -22,8 +22,7 @@ const Home = () => {
           <p className={`${source_code_pro.className} text-codeBlue mb-3`}>...but I love a lot of other things <span className='text-codeBlueDark cursor-pointer' onClick={()=>setCodeShown(prev=>!prev)}>too.</span><span className='font-thin text-lg animate-blinking-cursor'>|</span></p>
         </div>
         <div>
-        <CrtEffect off className={`bg-darkGray flex w-fit p-4 opacity-0 duration-500 transition-opacity ${codeShown ? 'opacity-100' : ''} `}>
-        <CodeBlock>
+        <CodeBlock codeShown={codeShown}>
 
   {`const DavidsInterests = ({freeTime, energyLevel}) => {
     if(!freeTime)
@@ -42,7 +41,6 @@ const Home = () => {
     return activity;
   }`}
         </CodeBlock>
-        </CrtEffect>
       </div>
       </section>
 
