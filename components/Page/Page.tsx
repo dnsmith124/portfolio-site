@@ -14,12 +14,12 @@ interface PageProps {
 const Page: FC<PageProps> = ({title, description = '', children}) => {
 
   return (
-    <div className="text-text relative">
+    <CrtEffect>
+      <div className="text-text relative min-h-screen">
       {/* <ScanLine /> */}
-      <CrtEffect>
         <HeadMeta title={title} description={description} />
         <Header title={title} />
-        <main className="flex flex-col justify-center w-full flex-1 p-20 max-w-7xl m-auto">
+        <main className="flex flex-col justify-center w-full flex-1 p-5 max-w-7xl m-auto">
           {
             title !== 'Home' &&
             <div className="mb-5">
@@ -29,8 +29,8 @@ const Page: FC<PageProps> = ({title, description = '', children}) => {
           {children}
         </main>
         <Footer />
-      </CrtEffect>
-    </div>
+      </div>
+    </CrtEffect>
   )
 }
 

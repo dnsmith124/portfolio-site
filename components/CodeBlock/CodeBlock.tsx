@@ -17,7 +17,7 @@ const CodeBlock: FC<CodeBlockProps> = ({children, codeShown = false}) => {
 
   return(
     <CrtEffect off className={`bg-darkGray flex w-fit p-4 opacity-0 duration-500 transition-opacity ${codeShown ? 'opacity-100' : ''} `}>
-      <pre className='relative z-20 overflow-hidden'>
+      <pre className='relative z-20 overflow-hidden min-h-[416px]'>
         <ScanLine/>
         <code className="language-typescript bg-transparent	rounded-md shadow-inner">
           {children}
