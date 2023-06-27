@@ -22,6 +22,12 @@ module.exports = {
       'mono': '"Source Code Pro", monospace;',
     },
     extend: {
+      transitionDuration: {
+        '2000': '2000ms',
+      },
+      gridTemplateColumns: {
+        'home-two-col': '.5fr 1fr'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -87,7 +93,7 @@ module.exports = {
           '95%': {'text-shadow': '2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px'},
           '100%': {'text-shadow': '2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px'},
         }, 
-        'scanline': {
+        scanline: {
           'from': {'top': '-10%'},
           'to': {'top': '110%'},
         }
