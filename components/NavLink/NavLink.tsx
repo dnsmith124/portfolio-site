@@ -16,7 +16,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, ...props }) => {
     return (
       <Link 
         href={href} 
-        className={`${isActive ? 'bg-darkGray border-t border-t-codeBlueDark' : 'bg-darkerGray text-textDark'} border-y border-l border-borderColor last-of-type:border-r p-4 transition-all ease-in-out duration-200 hover:bg-darkGray hover:text-text`} 
+        className={`${isActive ? 'bg-darkGray border-t border-t-codeBlueDark border-b-0' : 'bg-darkerGray text-textDark'} border-y border-l border-borderColor last-of-type:border-r p-4 transition-all ease-in-out duration-200 hover:bg-darkGray hover:text-text`} 
         {...props} 
         >
         {children}
