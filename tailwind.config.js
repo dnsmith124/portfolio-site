@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      'darkestGray': '#0e0e0e',
       'darkerGray': '#181818',
       'darkGray': '#1f1f1f',
       'medGray': '#454545',
@@ -16,6 +17,7 @@ module.exports = {
       'textDark': '#cccccc',
       'text': '#fff',
       'crtBg': 'rgba(18, 16, 16, 0.1)',
+      'monitorBaseColor': '#011627',
     },
     fontFamily : {
       'heading': 'Inconsolata, monospace',
@@ -26,7 +28,9 @@ module.exports = {
         '2000': '2000ms',
       },
       gridTemplateColumns: {
-        'home-two-col': '.5fr 1fr'
+        'home-two-col': '.5fr 1fr',
+        'projects-two-col': '.75fr 1fr',
+        'projects-auto-col': 'repeat(auto-fill, minmax(300px, 1fr))',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -94,8 +98,8 @@ module.exports = {
           '100%': {'text-shadow': '2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px'},
         }, 
         scanline: {
-          'from': {'top': '-20%'},
-          'to': {'top': '110%'},
+          'from': {'top': '-100%'},
+          'to': {'top': '120%'},
         }
       },
       animation: {

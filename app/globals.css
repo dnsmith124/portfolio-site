@@ -43,3 +43,7 @@ body {
 ::-webkit-scrollbar-track-piece:end {
   background: transparent;
 }
+
+body .yarl__container {
+  background-color: #181818;
+}
