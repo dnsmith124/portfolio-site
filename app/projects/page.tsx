@@ -166,7 +166,7 @@ const Projects = () => {
                             onClick={()=>{lightboxIndex.current = i; setLightboxOpen(true);}} 
                             className=' h-full w-full object-cover object-top rounded-md drop-shadow-md hover:drop-shadow-lg'
                             placeholder='blur'
-                            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=='
+                            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkqLhSDwADmQHNBnts3QAAAABJRU5ErkJggg=='
                           />
                         </div>
                       )
