@@ -128,8 +128,8 @@ const Projects = () => {
                       selectedProject.links.map((link, i)=>{
 
                         return(
-                          <a href={link.url} key={i} target='_blank' rel='noreferrer' className='text-codeBlue underline mr-6 transition-color duration-300 hover:text-codeBlueDark'>
-                            {link.label}<FontAwesomeIcon icon={faExternalLink} className='ml-2'/>
+                          <a href={link.url} key={i} target='_blank' rel='noreferrer' className='inline-flex items-center text-codeBlue underline mr-6 transition-color duration-300 hover:text-codeBlueDark'>
+                            {link.label}<FontAwesomeIcon icon={faExternalLink} width="16px" className='ml-2'/>
                           </a>)
                       })
                     }
@@ -157,13 +157,16 @@ const Projects = () => {
                             className='bg-darkGray opacity-20 transition-opacity duration-500 absolute top-0 right-0 bottom-0 left-0 z-50 cursor-pointer flex justify-center items-center hover:opacity-0 '
                             onClick={()=>{lightboxIndex.current = i; setLightboxOpen(true);}} 
                             >
-                            <FontAwesomeIcon icon={faPlusCircle}  className='h-14 w-14'/>
+                            <FontAwesomeIcon icon={faPlusCircle} width="56px"  className='h-14 w-14'/>
                           </div>
                           <Image 
                             src={image} 
                             alt='project screenshot' 
+                            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                             onClick={()=>{lightboxIndex.current = i; setLightboxOpen(true);}} 
                             className=' h-full w-full object-cover object-top rounded-md drop-shadow-md hover:drop-shadow-lg'
+                            placeholder='blur'
+                            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=='
                           />
                         </div>
                       )
