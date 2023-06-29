@@ -152,7 +152,7 @@ const Projects = () => {
                   {
                     selectedProject.images.map((image, i)=> {
                       return (
-                        <div className='h-72 w-full relative'>
+                        <div className='h-72 w-full relative' key={i}>
                           <div 
                             className='bg-darkGray opacity-20 transition-opacity duration-500 absolute top-0 right-0 bottom-0 left-0 z-50 cursor-pointer flex justify-center items-center hover:opacity-0 '
                             onClick={()=>{lightboxIndex.current = i; setLightboxOpen(true);}} 
@@ -162,7 +162,6 @@ const Projects = () => {
                           <Image 
                             src={image} 
                             alt='project screenshot' 
-                            key={i} 
                             onClick={()=>{lightboxIndex.current = i; setLightboxOpen(true);}} 
                             className=' h-full w-full object-cover object-top rounded-md drop-shadow-md hover:drop-shadow-lg'
                           />
