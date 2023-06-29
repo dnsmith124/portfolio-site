@@ -1,8 +1,5 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-import { inconsolata, source_code_pro } from './fonts'
-
-const inter = Inter({ subsets: ['latin'], display: 'swap' })
+import { inconsolata } from './fonts'
 
 export const metadata = {
   title: 'David Smith\'s Portfolio',
