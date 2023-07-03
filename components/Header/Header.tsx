@@ -23,7 +23,6 @@ const Header: FC<HeaderProps> = ({title}) => {
           <NavLink href="/">Home</NavLink>
           <NavLink href="/playable">Playable Portfolio</NavLink>
           <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/resume">Resume</NavLink>
           <NavLink href="/contact">Contact</NavLink>
           {/* <Toggle/> */}
         </div>

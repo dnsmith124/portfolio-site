@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import Page from '@/components/Page/Page';
 import CodeBlock from '@/components/CodeBlock/CodeBlock';
 import { timeout } from '@/utilities/utilities';
@@ -150,7 +150,7 @@ const Home = () => {
 }`}
             </CodeBlock>
           </div>
-          <div className={`opacity-0 duration-1000 transition-opacity lg:col-span-2 ${blurbVisible ? 'opacity-100 ' : ''}`}>
+          <div className={`opacity-0 duration-1000 transition-opacity lg:col-span-2 ${blurbVisible && 'opacity-100'}`}>
             <p className="mt-10 text-2xl text-center">
               Check out some of the files above to get to know more about me and my <Link href="/projects" className={`text-codeBlue hover:text-codeBlueDark z-50 relative transition-colors duration-300 underline`}>work</Link>.
             </p>
