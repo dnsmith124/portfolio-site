@@ -35,7 +35,7 @@ interface Project {
 }
 
 const defaultProject: Project = {
-  id: 0,
+  id: 1,
   label: 'React.js',
   name: 'NIH Biomedical Data Translator',
   images: [translatorOne, translatorThree, translatorTwo],
@@ -49,9 +49,8 @@ const defaultProject: Project = {
 } 
 
 const availableProjects: Project[] = [
-  defaultProject,
   {
-    id: 1,
+    id: 0,
     label: 'GatsbyJS.jsx',
     name: 'Tyvaso',
     images: [tyvasoOne, tyvasoTwo, tyvasoMob],
@@ -59,6 +58,7 @@ const availableProjects: Project[] = [
     icon: faReact,
     links: [{label: 'Live Site', url: 'https://www.tyvaso.com/ph-ild/'}]
   },
+  defaultProject,
   {
     id: 2,
     label: 'eCommerce.php',
@@ -102,6 +102,7 @@ const Projects = () => {
               <div className='w-full p-2 border-b border-darkestGray rounded-t-md mb-4 bg-darkerGray text-center'>
                 <p className='text-sm'>C:/DavidSmith/Projects</p>
               </div>
+              <p className={`${source_code_pro.className} text-codeBlue px-2 text-sm mb-6 w-full text-center`}>Select a file to view one of my projects:</p>
               {
                 availableProjects.map((project)=>{
 

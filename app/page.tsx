@@ -125,7 +125,7 @@ const Home = () => {
             <div className={`opacity-0 duration-1000 transition-opacity ${blurbVisible ? 'opacity-100 ' : ''}`}>
               <p className={`${source_code_pro.className} text-codeBlue mb-3`}>I&apos;m a frontend developer.</p>
               <p className={`${source_code_pro.className} text-codeBlue mb-3`}>I love writing clean, functional, maintainable code.</p>
-              <p className={`${source_code_pro.className} text-codeBlue mb-3`}>...but I love a lot of other things <span className='text-codeBlue font-bold cursor-pointer z-50 relative transition-colors duration-300 underline hover:text-codeBlueDark' onClick={()=>setCodeShown(prev=>!prev)}>too.</span></p>
+              <p className={`${source_code_pro.className} text-codeBlue mb-3`}>...but I love a lot of other things too:</p>
             </div>
           </div>
           <div className='overflow-auto'>
