@@ -1,5 +1,5 @@
 # My Portfolio Site
- <a href="https://dnswebdev.com" target="_blank">Live Site</a>
+[Live Site](https://dnswebdev.com)
 
 ## Project Status
 
