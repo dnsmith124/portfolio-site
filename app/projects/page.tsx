@@ -21,8 +21,8 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image, { StaticImageData } from 'next/image';
 import BlinkingCursor from '@/components/BlinkingCursor/BlinkingCursor';
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 interface Project {
   id: number;
@@ -77,7 +77,7 @@ const Projects = () => {
   const lightboxIndex = useRef(0);
 
   return (
-    <Page title='Projects' description="Some of David's projects.">
+    <Page title='Projects' description='Some of David's projects.'>
       <TypeAnimation
         sequence={[
           'C', 
@@ -129,7 +129,7 @@ const Projects = () => {
 
                         return(
                           <a href={link.url} key={i} target='_blank' rel='noreferrer' className='inline-flex items-center text-codeBlue underline mr-6 transition-color duration-300 hover:text-codeBlueDark'>
-                            {link.label}<FontAwesomeIcon icon={faExternalLink} width="16px" className='ml-2'/>
+                            {link.label}<FontAwesomeIcon icon={faExternalLink} width='16px' className='ml-2'/>
                           </a>)
                       })
                     }
@@ -157,7 +157,7 @@ const Projects = () => {
                             className='bg-darkGray opacity-20 transition-opacity duration-500 absolute top-0 right-0 bottom-0 left-0 z-50 cursor-pointer flex justify-center items-center hover:opacity-0 '
                             onClick={()=>{lightboxIndex.current = i; setLightboxOpen(true);}} 
                             >
-                            <FontAwesomeIcon icon={faPlusCircle} width="56px"  className='h-14 w-14'/>
+                            <FontAwesomeIcon icon={faPlusCircle} width='56px'  className='h-14 w-14'/>
                           </div>
                           <Image 
                             src={image} 

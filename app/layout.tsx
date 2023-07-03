@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={`min-h-screen bg-darkerGray ${inconsolata.className}`}>{children}</body>
     </html>
   )
