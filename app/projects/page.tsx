@@ -8,15 +8,15 @@ import FileIcon from '@/components/FileIcon/FileIcon';
 import { TypeAnimation } from 'react-type-animation';
 import { faPhp, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faStethoscope, faPlusCircle, faExternalLink } from '@fortawesome/free-solid-svg-icons';
-import tyvasoOne from '../../assets/project-screenshots/Tyvaso.png';
-import tyvasoTwo from '../../assets/project-screenshots/Tyvaso2.png';
-import tyvasoMob from '../../assets/project-screenshots/Tyvaso-mob.png';
-import truckworxOne from '../../assets/project-screenshots/Truckworx.png';
-import truckworxTwo from '../../assets/project-screenshots/Truckworx2.png';
-import truckworxMob from '../../assets/project-screenshots/Truckworx-mob.png';
-import translatorOne from '../../assets/project-screenshots/Translator.png';
-import translatorTwo from '../../assets/project-screenshots/Translator2.png';
-import translatorThree from '../../assets/project-screenshots/Translator3.png';
+import tyvasoOne from '@/assets/project-screenshots/Tyvaso.png';
+import tyvasoTwo from '@/assets/project-screenshots/Tyvaso2.png';
+import tyvasoMob from '@/assets/project-screenshots/Tyvaso-mob.png';
+import truckworxOne from '@/assets/project-screenshots/Truckworx.png';
+import truckworxTwo from '@/assets/project-screenshots/Truckworx2.png';
+import truckworxMob from '@/assets/project-screenshots/Truckworx-mob.png';
+import translatorOne from '@/assets/project-screenshots/Translator.png';
+import translatorTwo from '@/assets/project-screenshots/Translator2.png';
+import translatorThree from '@/assets/project-screenshots/Translator3.png';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image, { StaticImageData } from 'next/image';
@@ -77,7 +77,7 @@ const Projects = () => {
   const lightboxIndex = useRef(0);
 
   return (
-    <Page title='Projects' description='Some of David's projects.'>
+    <Page title='Projects' description="Some of David's projects.">
       <TypeAnimation
         sequence={[
           'C', 

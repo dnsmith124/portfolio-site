@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import NavLink from '../NavLink/NavLink';
-import Toggle from '../Toggle/Toggle';
+import NavLink from '@/components/NavLink/NavLink';
+import Toggle from '@/components/Toggle/Toggle';
 import Image from 'next/image';
 import Link from 'next/link';
-import siteLogo from '../../assets/images/croppedblue150x150.png';
+import siteLogo from '@/assets/images/croppedblue150x150.png';
 
 interface HeaderProps {
   title: string;

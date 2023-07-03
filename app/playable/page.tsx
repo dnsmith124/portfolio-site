@@ -1,5 +1,5 @@
 import Page from '@/components/Page/Page';
-import { source_code_pro } from '../fonts';
+import { source_code_pro } from '@/app/fonts';
 
 const PlayablePortfolio = () => {
   return (

@@ -1,7 +1,7 @@
 import { FC, ReactElement, useEffect, useState } from 'react';
-import CrtEffect from '../CrtEffect/CrtEffect';
+import CrtEffect from '@/components/CrtEffect/CrtEffect';
+import ScanLine from '@/components/ScanLine/ScanLine';
 import 'highlight.js/styles/night-owl.css';
-import ScanLine from '../ScanLine/ScanLine';
 
 interface MonitorProps {
   children: string | ReactElement[] | ReactElement;

@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react'
-import ScanLine from '../ScanLine/ScanLine';
+import ScanLine from '@/components/ScanLine/ScanLine';
 
 interface CrtEffectProps {
   children: ReactElement[] | ReactElement;

@@ -1,8 +1,8 @@
 import { FC, ReactElement, useEffect } from 'react';
-import CrtEffect from '../CrtEffect/CrtEffect';
+import CrtEffect from '@/components/CrtEffect/CrtEffect';
+import ScanLine from '@/components/ScanLine/ScanLine';
 import 'highlight.js/styles/night-owl.css';
 import hljs from 'highlight.js';
-import ScanLine from '../ScanLine/ScanLine';
 
 interface CodeBlockProps {
   children: string | ReactElement[] | ReactElement;

@@ -1,9 +1,8 @@
-import HeadMeta from '../HeadMeta/HeadMeta';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import { FC, ReactNode } from 'react'
-import CrtEffect from '../CrtEffect/CrtEffect';
-import ScanLine from '../ScanLine/ScanLine';
+import HeadMeta from '@/components/HeadMeta/HeadMeta';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
+import CrtEffect from '@/components/CrtEffect/CrtEffect';
 
 interface PageProps {
   title: string;
