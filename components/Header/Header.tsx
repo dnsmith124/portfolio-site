@@ -4,6 +4,9 @@ import Toggle from '@/components/Toggle/Toggle';
 import Image from 'next/image';
 import Link from 'next/link';
 import siteLogo from '@/assets/images/croppedblue150x150.png';
+import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 interface HeaderProps {
   title: string;
@@ -21,10 +24,14 @@ const Header: FC<HeaderProps> = ({title}) => {
         </Link>
         <div className='flex flex-wrap w-full md:w-auto md:order-3'>
           <NavLink href='/'>Home</NavLink>
-          <NavLink href='/playable'>Playable Portfolio</NavLink>
           <NavLink href='/projects'>Projects</NavLink>
-          <NavLink href='/contact'>Contact</NavLink>
-          <a href='https://github.com/dnsmith124' target='_blank' rel='noreferrer'></a>
+          <NavLink href='/playable'>Playable Portfolio</NavLink>
+          <NavLink href='https://github.com/dnsmith124' target="_blank" rel="noreferrer" icon external>
+            <FontAwesomeIcon icon={faGithub} width='24px' style={{height: '24px'}} />
+          </NavLink>
+          <NavLink href='https://www.linkedin.com/in/david-smith-a847aa55/' target="_blank" rel="noreferrer" icon external>
+            <FontAwesomeIcon icon={faLinkedin} width='24px' style={{height: '24px'}} />
+          </NavLink>
           {/* <Toggle/> */}
         </div>
       </div>
