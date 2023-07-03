@@ -26,5 +26,7 @@ Installation:
 
 ## Project Screen Shot(s)
 
+#### Home Page
 ![Home Page](/assets/home.png?raw=true "Home Page")
+#### Project Page
 ![Project Page](/assets/projects.png?raw=true "Project Page")
