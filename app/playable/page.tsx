@@ -12,7 +12,7 @@ const PlayablePortfolio = () => {
         sequence={[
           'A', 
           0,
-          'An openGL based portfolio *experience*:', 
+          'An openGL-based portfolio *experience*:', 
           250,
           () => {},
         ]}
