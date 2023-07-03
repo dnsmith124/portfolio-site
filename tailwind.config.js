@@ -100,6 +100,31 @@ module.exports = {
         scanline: {
           'from': {'top': '-100%'},
           'to': {'top': '120%'},
+        },
+        wobble: {
+          '0%, 75%': {
+            'transform': 'translateX(0%)',
+            'transform-origin': '50% 50%',
+          },
+          '100%': {
+            'transform': 'translateX(0%)',
+            'transform-origin': '50% 50%',
+          },
+          '78.75%': {
+            'transform': 'translateX(-12px) rotate(-10deg)',
+          },
+          '82.5%': {
+            'transform': 'translateX(calc(12px / 2)) rotate(10deg)',
+          },
+          '86.25%': {
+            'transform': 'translateX(calc(-12px / 2)) rotate(calc(-10deg / 1.8))',
+          },
+          '90%': {
+            'transform': 'translateX(calc(12px / 3.3)) rotate(calc(10deg / 3))',
+          },
+          '93.75%': {
+            'transform': 'translateX(calc(-12px / 5.5)) rotate(calc(-10deg / 5))',
+          },
         }
       },
       animation: {
@@ -107,6 +132,7 @@ module.exports = {
         'text-shadow': '1.6s textShadow infinite',
         'crt-flicker': 'flicker 0.15s infinite',
         'scanline': 'scanline 3s linear infinite',
+        'wobble': 'wobble 4s linear infinite',
       }, 
     },
   },

@@ -11,8 +11,8 @@ const HeadMeta: FC<HeadMetaProps> = ({description = '', title = 'Default Title'}
   return(
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <link rel="icon" href="/favicon.ico" />
+      <meta name='description' content={description} />
+      <link rel='icon' href='/favicon.ico' />
     </Head>
   )
 }

@@ -14,12 +14,12 @@ interface FileIconProps {
 const FileIcon: FC<FileIconProps> = ({ subIcon = null, label = '', onClick = () => {}, active = false}) => {
 
   return(
-    <button className={`cursor-pointer text-center mx-5 mb-5  hover:underline ${active && 'underline'}`} onClick={onClick}>
-      <div className='relative flex justify-center'>
-        <FontAwesomeIcon width="80px" style={{display: 'inline-block'}} className='w-20 h-20 drop-shadow-md' icon={faFile} />
+    <button className={`cursor-pointer text-center mx-5 mb-5  hover:underline ${active && 'underline font-bold'} `} onClick={onClick}>
+      <div className='relative flex justify-center animate-wobble'>
+        <FontAwesomeIcon width='80px' style={{display: 'inline-block'}} className='w-20 h-20 drop-shadow-md' icon={faFile} />
         {subIcon !== null &&
           <div className='absolute top-3 right-0 bottom-0 left-0 z-10 flex justify-center items-center'>
-            <FontAwesomeIcon width="36px" style={{height: '36px'}} className=' text-darkerGray fill-current' icon={subIcon} />
+            <FontAwesomeIcon width='36px' style={{height: '36px'}} className=' text-darkerGray fill-current' icon={subIcon} />
           </div>
         }
       </div>

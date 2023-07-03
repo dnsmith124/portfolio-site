@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import Page from '@/components/Page/Page';
 import CodeBlock from '@/components/CodeBlock/CodeBlock';
 import { timeout } from '@/utilities/utilities';
@@ -17,11 +17,11 @@ const Home = () => {
   const [animTrigger, setAnimTrigger] = useState(false);
 
   const checkLocalStorageForPageLoaded = () => {
-    if(typeof window !== "undefined" && !animPlayed) {
-      let initAnimPlayed = JSON.parse(window.localStorage.getItem("pageLoaded") || "false") || false;
+    if(typeof window !== 'undefined' && !animPlayed) {
+      let initAnimPlayed = JSON.parse(window.localStorage.getItem('pageLoaded') || 'false') || false;
       setAnimPlayed(initAnimPlayed);
       setAnimTrigger(prev=>!prev);
-      window.localStorage.setItem("pageLoaded", "true");
+      window.localStorage.setItem('pageLoaded', 'true');
     }
   }
 
@@ -49,7 +49,7 @@ const Home = () => {
   }
 
   return (
-    <Page title="Home" description="A NextJS portfolio site for David Smith.">
+    <Page title='Home' description='A NextJS portfolio site for David Smith.'>
       {
         showContent &&
 
@@ -67,7 +67,7 @@ const Home = () => {
                         () => {setBlurbVisible(true); setCodeShown(true)},
                       ]}
                       preRenderFirstString
-                      wrapper="p"
+                      wrapper='p'
                       cursor={true}
                       speed={1}
                       deletionSpeed={1}
@@ -83,7 +83,7 @@ const Home = () => {
                         250,
                         () => {},
                       ]}
-                      wrapper="p"
+                      wrapper='p'
                       cursor={false}
                       speed={1}
                       deletionSpeed={1}
@@ -112,7 +112,7 @@ const Home = () => {
                         async () => {setBlurbVisible(true); await timeout(1000).then(()=>setCodeShown(true))},
                       ]}
                       preRenderFirstString
-                      wrapper="p"
+                      wrapper='p'
                       cursor={true}
                       speed={1}
                       deletionSpeed={1}
@@ -150,9 +150,9 @@ const Home = () => {
 }`}
             </CodeBlock>
           </div>
-          <div className={`opacity-0 duration-1000 transition-opacity lg:col-span-2 ${blurbVisible ? 'opacity-100 ' : ''}`}>
-            <p className="mt-10 text-2xl text-center">
-              Check out some of the files above to get to know more about me and my <Link href="/projects" className={`text-codeBlue hover:text-codeBlueDark z-50 relative transition-colors duration-300 underline`}>work</Link>.
+          <div className={`opacity-0 duration-1000 transition-opacity lg:col-span-2 ${blurbVisible && 'opacity-100'}`}>
+            <p className='mt-10 text-2xl text-center'>
+              Check out some of the files above to get to know more about me and my <Link href='/projects' className={`text-codeBlue hover:text-codeBlueDark z-50 relative transition-colors duration-300 underline`}>work</Link>.
             </p>
             <p className='text-sm mt-20 text-center'>
               By default the home page animation only runs on first load, click 
