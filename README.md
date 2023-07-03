@@ -5,7 +5,9 @@
 This project is currently in development. It is a portfolio site built with NextJS, Typescript, and Tailwind to display some of my work.
 
 ## Feature Roadmap
-TBD
+- [ ] Integrate Playable Portfolio 
+- [x] Projects Page
+- [x] Home Page
 
 ## Technologies used
 
