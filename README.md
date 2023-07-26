@@ -6,7 +6,7 @@
 This project is currently in development. It is a portfolio site built with NextJS, Typescript, and Tailwind to display some of my work.
 
 ## Feature Roadmap
-- [ ] Integrate Playable Portfolio 
+- [x] Integrate Playable Portfolio 
 - [x] Projects Page
 - [x] Home Page
 
@@ -31,3 +31,6 @@ Installation:
 ![Home Page](/assets/home.png?raw=true "Home Page")
 #### Project Page
 ![Project Page](/assets/projects.png?raw=true "Project Page")
+
+#### Playable Portfolio Page
+![Playable Portfolio Page](/assets/portfolio.png?raw=true "Playable Portfolio Page")

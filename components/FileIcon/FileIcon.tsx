@@ -14,7 +14,7 @@ interface FileIconProps {
 const FileIcon: FC<FileIconProps> = ({ subIcon = null, label = '', onClick = () => {}, active = false}) => {
 
   return(
-    <button className={`cursor-pointer text-center mx-5 mb-5  hover:underline ${active && 'underline font-bold'} `} onClick={onClick}>
+    <button className={`cursor-pointer text-center mb-5 hover:underline ${active && 'underline font-bold'} `} onClick={onClick}>
       <div className='relative flex justify-center animate-wobble'>
         <FontAwesomeIcon width='80px' style={{display: 'inline-block'}} className='w-20 h-20 drop-shadow-md' icon={faFile} />
         {subIcon !== null &&

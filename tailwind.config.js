@@ -24,6 +24,9 @@ module.exports = {
       'mono': '"Source Code Pro", monospace;',
     },
     extend: {
+      screens: {
+        'xs': '375px'
+      },
       transitionDuration: {
         '2000': '2000ms',
       },

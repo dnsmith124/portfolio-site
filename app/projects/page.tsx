@@ -6,8 +6,8 @@ import Page from '@/components/Page/Page';
 import Monitor from '@/components/Monitor/Monitor';
 import FileIcon from '@/components/FileIcon/FileIcon';
 import { TypeAnimation } from 'react-type-animation';
-import { faPhp, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faStethoscope, faPlusCircle, faExternalLink } from '@fortawesome/free-solid-svg-icons';
+import { faPhp, faReact, faUnity } from '@fortawesome/free-brands-svg-icons';
+import { faStethoscope, faPlusCircle, faExternalLink, faMusic } from '@fortawesome/free-solid-svg-icons';
 import tyvasoOne from '@/assets/project-screenshots/Tyvaso.png';
 import tyvasoTwo from '@/assets/project-screenshots/Tyvaso2.png';
 import tyvasoMob from '@/assets/project-screenshots/Tyvaso-mob.png';
@@ -17,6 +17,15 @@ import truckworxMob from '@/assets/project-screenshots/Truckworx-mob.png';
 import translatorOne from '@/assets/project-screenshots/Translator.png';
 import translatorTwo from '@/assets/project-screenshots/Translator2.png';
 import translatorThree from '@/assets/project-screenshots/Translator3.png';
+import spotifyOne from '@/assets/project-screenshots/spotify1.png';
+import spotifyTwo from '@/assets/project-screenshots/spotify2.png';
+import spotifyThree from '@/assets/project-screenshots/spotify3.png';
+import gameOne from '@/assets/project-screenshots/game1.png';
+import gameTwo from '@/assets/project-screenshots/game2.png';
+import gameThree from '@/assets/project-screenshots/game3.png';
+import portfolioOne from '@/assets/home.png';
+import portfolioTwo from '@/assets/portfolio.png';
+import portfolioThree from '@/assets/projects.png';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image, { StaticImageData } from 'next/image';
@@ -44,7 +53,7 @@ const defaultProject: Project = {
   links: [
     {label: 'Live Site', url: 'https://ui.transltr.io/'},
     {label: 'About the Translator Project', url: 'https://ncats.nih.gov/translator/about'},
-    {label: 'Github', url: 'https://github.com/NCATSTranslator/ui-fe'},
+    {label: 'Github Repo', url: 'https://github.com/NCATSTranslator/ui-fe'},
   ]
 } 
 
@@ -68,6 +77,39 @@ const availableProjects: Project[] = [
     icon: faPhp,
     links: [{label: 'Live Site', url: 'https://truckworx.com/'}]
   },
+  {
+    id: 3,
+    label: 'Vite.jsx',
+    name: 'Spotify Web API',
+    images: [spotifyOne, spotifyTwo, spotifyThree],
+    description: 'A recreation of Spotify\'s web application, with responsive additions. Users can browse their saved playlists, see their top artists and tracks, and even control playback.',
+    icon: faMusic,
+    links: [{label: 'Github Repo', url: 'https://github.com/dnsmith124/spotify-web-api-react'}]
+  },
+  {
+    id: 4,
+    label: 'Unity.cs',
+    name: 'Playable Portfolio Game',
+    images: [gameOne, gameTwo, gameThree],
+    description: 'A short third-person action RPG built using C# and the Unity Game Engine. Playable in browser via WebGL, this game details my work experience, education, and interests--provided you can defeat the monster that\'s plaguing the kingdom!',
+    icon: faUnity,
+    links: [
+      {label: 'Play Here', url: '/playable'},
+      {label: 'Github Repo', url: 'https://github.com/dnsmith124/OpenGLPortfolioScripts'}
+    ]
+  },
+  {
+    id: 5,
+    label: 'Portfolio.tsx',
+    name: 'My Portfolio Site',
+    images: [portfolioOne, portfolioTwo, portfolioThree],
+    description: 'The site you\'re browsing now! Built with NextJS, Typescript, and Tailwind.',
+    icon: faUnity,
+    links: [
+      {label: 'You\'re already here!', url: '/projects'},
+      {label: 'Github Repo', url: 'https://github.com/dnsmith124/portfolio-site'}
+    ]
+  }
 ]
 
 const Projects = () => {
@@ -103,20 +145,22 @@ const Projects = () => {
                 <p className='text-sm'>C:/DavidSmith/Projects</p>
               </div>
               <p className={`${source_code_pro.className} text-codeBlue px-2 text-sm mb-6 w-full text-center`}>Select a file to view one of my projects:</p>
-              {
-                availableProjects.map((project)=>{
+              <div className='grid grid-cols-1 gap-2 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-3 xs:grid-cols-2 justify-evenly w-full'>
+                {
+                  availableProjects.map((project)=>{
 
-                  return (
-                    <FileIcon 
-                      key={project.id} 
-                      label={project.label} 
-                      subIcon={project.icon} 
-                      onClick={()=>{setSelectedProject(project)}}
-                      active={selectedProject && project.id === selectedProject.id}
-                    />
-                  )
-                })
-              }
+                    return (
+                      <FileIcon 
+                        key={project.id} 
+                        label={project.label} 
+                        subIcon={project.icon} 
+                        onClick={()=>{setSelectedProject(project)}}
+                        active={selectedProject && project.id === selectedProject.id}
+                      />
+                    )
+                  })
+                }
+              </div>
             </div>
             <div className='right'>
               {
