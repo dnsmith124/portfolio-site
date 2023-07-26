@@ -33,7 +33,7 @@ const PlayablePortfolio = () => {
         {
           (width === undefined || width < minScreenWidth)
           ? 
-            <p className="text-m">My playable portfolio was designed with Mouse & Keyboard controls in mind, along with a widescreen width. If you're on a desktop or laptop, please increase the width of your browser window until this message disappears. If you're on a mobile device or tablet, check out this page on either a desktop or laptop to play.</p>
+            <p className="text-m">My playable portfolio was designed with Mouse & Keyboard controls in mind, along with a widescreen width. If you&apos;re on a desktop or laptop, please increase the width of your browser window until this message disappears. If you&apos;re on a mobile device or tablet, check out this page on either a desktop or laptop to play.</p>
           : 
             <>
               <p className="mb-2 text-center">The game can take a minute or two to load its assets when first accessed, please be patient!</p>
