@@ -25,7 +25,7 @@ const Header: FC<HeaderProps> = ({title}) => {
         <div className='flex flex-wrap w-full md:w-auto md:order-3'>
           <NavLink href='/'>Home</NavLink>
           <NavLink href='/projects'>Projects</NavLink>
-          <NavLink href='/playable'>Playable Portfolio</NavLink>
+          {/* <NavLink href='/playable'>Playable Portfolio</NavLink> */}
           <NavLink href='https://github.com/dnsmith124' target="_blank" rel="noreferrer" icon external>
             <FontAwesomeIcon icon={faGithub} width='24px' style={{height: '24px'}} />
           </NavLink>
